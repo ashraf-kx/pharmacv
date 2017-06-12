@@ -1,1 +1,5 @@
-<RCC/>
+<RCC>
+    <qresource prefix="/">
+        <file>styles/MaterialDesign.css</file>
+    </qresource>
+</RCC>

@@ -1,1 +1,6 @@
-<RCC/>
+<RCC>
+    <qresource prefix="/">
+        <file>icons/ic_play_arrow_white_2x.png</file>
+        <file>icons/ic_stop_white_2x.png</file>
+    </qresource>
+</RCC>
