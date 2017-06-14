@@ -40,49 +40,78 @@ FORMS    += mainwindow.ui \
     framedetactor.ui
 
 
+unix {
+
+INCLUDEPATH += /usr/local/include/opencv2
+
+LIBS += -L /usr/local/lib \
+        -lopencv_calib3d \
+        -lopencv_contrib \
+        -lopencv_core \
+        -lopencv_features2d \
+        -lopencv_flann \
+        -lopencv_gpu \
+        -lopencv_highgui \
+        -lopencv_imgproc \
+        -lopencv_legacy \
+        -lopencv_ml \
+        -lopencv_nonfree \
+        -lopencv_objdetect \
+        -lopencv_ocl \
+        -lopencv_photo \
+        -lopencv_stitching \
+        -lopencv_superres \
+        -lopencv_video \
+        -lopencv_videostab
+}
+
+win32 {
 
 INCLUDEPATH+= D:\\openCV\\build\\include
 
-LIBS += -LD:\\openCV\\x64\\lib\\Release \
-            -lopencv_calib3d2413 \
-            -lopencv_contrib2413 \
-            -lopencv_core2413 \
-            -lopencv_features2d2413 \
-            -lopencv_flann2413 \
-            -lopencv_gpu2413 \
-            -lopencv_highgui2413 \
-            -lopencv_imgproc2413 \
-            -lopencv_legacy2413 \
-            -lopencv_ml2413 \
-            -lopencv_nonfree2413 \
-            -lopencv_objdetect2413 \
-            -lopencv_ocl2413 \
-            -lopencv_photo2413 \
-            -lopencv_stitching2413 \
-            -lopencv_superres2413 \
-            -lopencv_video2413 \
-            -lopencv_videostab2413
-
-LIBS += -LD:\\openCV\\x64\\lib\\Debug \
-            -lopencv_calib3d2413d \
-            -lopencv_contrib2413d \
-            -lopencv_core2413d \
-            -lopencv_features2d2413d \
-            -lopencv_flann2413d \
-            -lopencv_gpu2413d \
-            -lopencv_highgui2413d \
-            -lopencv_imgproc2413d \
-            -lopencv_legacy2413d \
-            -lopencv_ml2413d \
-            -lopencv_nonfree2413d \
-            -lopencv_objdetect2413d \
-            -lopencv_ocl2413d \
-            -lopencv_photo2413d \
-            -lopencv_stitching2413d \
-            -lopencv_superres2413d \
-            -lopencv_video2413d \
-            -lopencv_videostab2413d
-
+    debug {
+    LIBS += -LD:\\openCV\\x64\\lib\\Debug \
+                -lopencv_calib3d2413d \
+                -lopencv_contrib2413d \
+                -lopencv_core2413d \
+                -lopencv_features2d2413d \
+                -lopencv_flann2413d \
+                -lopencv_gpu2413d \
+                -lopencv_highgui2413d \
+                -lopencv_imgproc2413d \
+                -lopencv_legacy2413d \
+                -lopencv_ml2413d \
+                -lopencv_nonfree2413d \
+                -lopencv_objdetect2413d \
+                -lopencv_ocl2413d \
+                -lopencv_photo2413d \
+                -lopencv_stitching2413d \
+                -lopencv_superres2413d \
+                -lopencv_video2413d \
+                -lopencv_videostab2413d
+    }
+    release {
+    LIBS += -LD:\\openCV\\x64\\lib\\Release \
+                -lopencv_calib3d2413 \
+                -lopencv_contrib2413 \
+                -lopencv_core2413 \
+                -lopencv_features2d2413 \
+                -lopencv_flann2413 \
+                -lopencv_gpu2413 \
+                -lopencv_highgui2413 \
+                -lopencv_imgproc2413 \
+                -lopencv_legacy2413 \
+                -lopencv_ml2413 \
+                -lopencv_nonfree2413 \
+                -lopencv_objdetect2413 \
+                -lopencv_ocl2413 \
+                -lopencv_photo2413 \
+                -lopencv_stitching2413 \
+                -lopencv_superres2413 \
+                -lopencv_video2413 \
+                -lopencv_videostab2413
+    }
+}
 RESOURCES += \
     icons.qrc \
     styles.qrc
